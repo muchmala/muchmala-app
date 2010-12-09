@@ -1,0 +1,24 @@
+{ "name" : "muchmala-app"
+, "version" : "0.0.1"
+, "description" : "Application server for muchmala"
+, "contributors" :
+ [ "Serge Borbit <serge.borbit@gmail.com>"
+ , "Taras Kunch <taras.kunch@gmail.com>"
+ , "George Miroshnykov <george.miroshnykov@gmail.com>"
+ ]
+, "repositories":
+ { "type" : "git"
+ , "url" : "https://github.com/muchmala/muchmala-app.git"
+ }
+, "dependencies" :
+ { "flow" : "~0"
+ , "underscore" : "~1"
+
+ , "socket.io-cluster" : "~0"
+ , "muchmala-common" : "~0"
+ }
+, "engines" :
+ { "node" : "~0.4"
+ , "npm" : "~1"
+ }
+}
