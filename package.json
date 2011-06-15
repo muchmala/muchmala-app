@@ -12,6 +12,7 @@
  }
 , "dependencies" :
  { "flow" : "~0"
+ , "async" : "~0"
  , "underscore" : "~1"
 
  , "socket.io-cluster" : "~0"
