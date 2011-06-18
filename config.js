@@ -13,7 +13,7 @@ config.queue = {
     database: 0
 };
 
-var localConfigPath = './config.local.js';
+var localConfigPath = __dirname + '/config.local.js';
 if (require('path').existsSync(localConfigPath)) {
     var localConfig = require(localConfigPath),
         deepExtend = require('muchmala-common').misc.deepExtend;
