@@ -1,22 +1,14 @@
 var config = exports;
 
 config.mongodb = {
-    host:     '127.0.0.1',
-    user:     'mongodb',
-    database: 'muchmala'
+    host:     process.env.MUCHMALA_MONGODB_HOST || '127.0.0.1',
+    user:     process.env.MUCHMALA_MONGODB_USER || 'mongodb',
+    database: process.env.MUCHMALA_MONGODB_DATABASE || 'muchmala'
 };
 
 config.queue = {
-    host: "127.0.0.1",
-    port: 6379,
-    password: undefined,
-    database: 0
+    host: process.env.MUCHMALA_QUEUE_HOST || '127.0.0.1',
+    port: process.env.MUCHMALA_QUEUE_PORT || 6379,
+    password: process.env.MUCHMALA_QUEUE_PASSWORD || undefined,
+    database: process.env.MUCHMALA_QUEUE_DATABASE || 0
 };
-
-var localConfigPath = __dirname + '/config.local.js';
-if (require('path').existsSync(localConfigPath)) {
-    var localConfig = require(localConfigPath),
-        deepExtend = require('muchmala-common').misc.deepExtend;
-
-    deepExtend(config, localConfig);
-}
