@@ -12,3 +12,7 @@ config.queue = {
     password: process.env.MUCHMALA_QUEUE_PASSWORD || undefined,
     database: process.env.MUCHMALA_QUEUE_DATABASE || 0
 };
+
+config.io = {
+    port: process.env.MUCHMALA_IO_PORT || 8090,
+};
